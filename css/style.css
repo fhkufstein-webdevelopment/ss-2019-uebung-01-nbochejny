@@ -36,7 +36,7 @@ body {
 }
 
 .logo:before {
-    content:"\f155";
+    content:"\f155"; /*ich weiß nicht was f155 bedeutet*/
     font-family: "FontAwesome", sans-serif;
     display: inline-block;
     margin-right:15px;
@@ -52,5 +52,87 @@ footer {
 
 
 
+header .inner {
+    width:990px;
+    margin:0 auto; /*Macht "Platz" um ein Element, durch auto Browserdefiniert*/
+}
 
+#main .inner {
+    width:990px;
+    margin:0 auto;
+}
+
+footer .inner {
+    width:990px;
+    margin:0 auto;
+}
+
+
+
+
+
+
+header nav ul {
+    list-style-type: none; /*Entferne alles unnötige, die punkte und der Bereich um die nav*/
+    margin: 0;
+    padding: 0;
+}
+header nav a {
+    text-decoration: none; /*Keine Extras wie unterstrichen sein mehr*/
+}
+header nav .level_1 li a {
+    color:#337ab7;
+    font-size: 15px;
+    font-weight: bold;
+}
+header nav .level_2 li a {
+    font-weight: lighter;
+    font-size: 13px;
+}
+header nav .level_2 {
+    background-color:white;
+}
+header nav .level_2 li:hover {
+    background-color: #337ab7;
+}
+header nav .level_2 li:hover a {
+    color: white;
+}
+header nav {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+header nav .level_2 li {
+    display: table-row; /*CSS Tabelle erstellen*/
+    width: 100%;
+}
+header nav .level_2 a {
+    display: table-cell;
+    min-width: 200px;
+    padding: 10px 5px;
+}
+
+
+
+header nav .level_2 {
+    display: none; /*Versteckt die untergeordneten Nav Elemente*/
+}
+
+header nav .level_1 li { /*Um Überpunkte nebeneinander anzuordnen*/
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+header nav .level_2 {
+    position: absolute; /*Aus dem Textfluss nehmen*/
+}
+
+header nav .level_1 li:hover .level_2 {
+    display:block;
+}
 
